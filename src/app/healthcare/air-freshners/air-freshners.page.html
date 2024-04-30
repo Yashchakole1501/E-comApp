@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Air Freshners</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- First Card -->
+  <ion-row>
+  <ion-col size="auto" style="margin-right: 5px;">
+    <ion-item (click)="navigateTo('napthalene')">
+      <ion-card style="margin-right: 10px;width:200px;height: auto;" class="ion-card">
+        <ion-img src="https://rukminim2.flixcart.com/image/612/612/ktq4l8w0/naphthalene-ball/f/f/v/1000-ihp-original-imag7yf3devua9wf.jpeg?q=70" alt="Card Image" style="height: 100px; width: 100px;margin-left: 15px;"></ion-img>
+        <ion-card-subtitle style="margin-left: 15px;">
+          <b>Napthalene<br> Balls</b>
+          <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span></p>
+          <p style="color: red; margin: 0;">27% Off</p>
+        </ion-card-subtitle>
+        <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 10px;">
+         
+            <ion-icon name="cart-outline"></ion-icon>add to cart
+         
+        </div>
+      </ion-card>
+    </ion-item>
+  </ion-col>
+
+  <!-- Second Card -->
+  
+  <ion-col size="auto" style="margin-right: 5px;">
+    <ion-item (click)="navigateTo('room')">
+      <ion-card style="margin-right: 10px;width:200px;height: auto;" class="ion-card">
+        <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/air-freshener/y/n/m/-original-imaghdfbyvzwtk6p.jpeg?q=70" alt="Card Image" style="height: 100px; width: 100px;margin-left: 20px;"></ion-img>
+        <ion-card-subtitle style="margin-left: 15px;">
+          <b>Room Fresheners</b>
+          <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span></p>
+          <p style="color: red; margin: 0;">27% Off</p>
+        </ion-card-subtitle>
+        <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 10px;">
+         
+            <ion-icon name="cart-outline"></ion-icon>add to cart
+       
+        </div>
+      </ion-card>
+    </ion-item>
+  </ion-col>
+  </ion-row>
+</ion-content>

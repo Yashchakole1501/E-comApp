@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>E-Shopping App</ion-title> -->
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+      <div class="avatar-container">
+        <ion-avatar slot="start" (click)="myaccount()">
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+      </div>
+      <div><b>Buy Now</b></div>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+   
+  <div slot="end" style="padding-right: 15px;" class="cart-container" (click)="goToCartPage()">
+    <ion-icon name="cart-outline" style="font-size:32px;"></ion-icon>
+    <ion-badge color="danger" class="cart-badge" *ngIf="cartService.getSelectedItems().length > 0">
+      {{ cartService.getSelectedItems().length }}
+    </ion-badge>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Payment options -->
+  <ion-list class="payment-options">
+    <ion-radio-group [(ngModel)]="selectedPaymentOption">
+      <ion-list-header>
+        <ion-label>Payment Options</ion-label>
+      </ion-list-header>
+
+      <ion-item lines="none">
+        <ion-label>Cash on Delivery</ion-label>
+        <ion-radio slot="start" value="cash"></ion-radio>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Payment Gateway</ion-label>
+        <ion-radio slot="start" value="card"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <!-- Buy Now Button -->
+  <ion-button expand="block" class="place-order-btn" (click)="showLoginAlert()">Place Order</ion-button>
+</ion-content>

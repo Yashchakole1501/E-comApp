@@ -1,0 +1,43 @@
+/* my-account.page.scss */
+
+ion-toolbar {
+    --background: linear-gradient(to right, #4CAF50, #2196F3); /* Background color gradient */
+    color: #fff; /* Text color */
+    padding-top: 10px; /* Add some padding to the top */
+  }
+  
+  p {
+    font-size: 20px; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    margin: 0;
+    padding-left: 5px; /* Remove default margin */
+  }
+  
+  ion-back-button {
+    --color: #fff; /* Back button color */
+  }
+  
+  ion-button {
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    text-transform: uppercase; /* Uppercase text */
+    --background: grey; /* Background color */
+    --color: #fff; /* Text color */
+    padding: 8px 16px 6px; /* Padding */
+    border-radius: 4px; /* Border radius */
+
+  }
+  
+  
+  
+//   ion-button:hover {
+//     --background: #e7dad6; /* Darker shade of orange on hover */
+//   }
+.username-title {
+    font-size: 14px; /* Adjust font size as needed */
+    font-weight: bold; /* Optionally set font weight */
+    color: #333; /* Optionally set font color */
+    text-transform: uppercase; /* Optionally transform text to uppercase */
+    text-align: center; /* Optionally center-align text */
+  }
+  

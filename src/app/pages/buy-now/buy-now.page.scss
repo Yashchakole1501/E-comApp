@@ -1,0 +1,68 @@
+/* Page Background */
+.buy-now-page {
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+/* Header */
+ion-header {
+  --background: linear-gradient(to right, #ff4e50, #f9d423); /* Header background gradient */
+  --color: #fff; /* Header text color */
+}
+
+ion-toolbar {
+  --background: transparent; /* Transparent toolbar background */
+}
+
+ion-title {
+  font-size: 1.5rem; /* Title font size */
+  font-weight: bold; /* Title font weight */
+}
+
+/* Content */
+ion-content {
+  padding: 20px; /* Add padding to content */
+}
+
+/* Payment Options */
+.payment-options {
+  background-color: #fff; /* Payment options background color */
+  border-radius: 10px; /* Payment options border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Payment options box shadow */
+  margin-top: 20px; /* Margin top for payment options */
+}
+
+/* Place Order Button */
+.place-order-btn {
+  margin-top: 20px; /* Margin top for place order button */
+  --background: linear-gradient(to right, #ff4e50, #f9d423); /* Place order button background gradient */
+  --border-radius: 50px; /* Place order button border radius */
+  font-weight: bold; /* Place order button font weight */
+  color: #fff; /* Place order button text color */
+}
+ion-toolbar {
+  --background: linear-gradient(to right, #4CAF50, #2196F3); /* Background color gradient */
+  color: #fff; /* Text color */
+
+}
+  /* Apply the animation to the avatar image */
+ion-avatar img {
+  animation: blink 4s infinite;
+  height:30px;
+  width:30px;
+ margin-left: 10px;
+margin-top: 16px;
+   /* Adjust the duration and other properties as needed */
+}
+/* Styles for the cart badge */
+/* Styles for the ion-badge */
+ion-badge {
+  --background: red; /* Change the background color */
+  --color: white; /* Change the text color */
+  font-size: 14px; /* Adjust the font size */
+  font-weight: bold; /* Make the font bold */
+  padding: 4px 8px; /* Add padding to the badge */
+  border-radius: 50%; /* Make the badge circular */
+  position: absolute; /* Position the badge */
+  top: 5px; /* Adjust the top position */
+  right: 10px; /* Adjust the right position */
+}

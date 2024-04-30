@@ -1,0 +1,132 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pooja Products</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- First column with three cards -->
+  <ion-row>
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-card routerLink="/jasmine" style="margin-right: 10px; width: 150px;" class="ion-card">
+        <ion-img src="https://rukminim2.flixcart.com/image/612/612/kk76wsw0/hair-oil/9/z/m/980-jasmine-non-sticky-coconut-oil-parachute-advansed-original-imafzhndq4dvk6gc.jpeg?q=70" alt="Card Image"
+          style="height: 100px; width: 100px; margin-left: 10px;"></ion-img>
+        <ion-card-subtitle style="margin-left: 15px;">
+          <b>Jasmine Oil</b>
+          <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span>
+          </p>
+          <p style="color: red; margin: 0;">27% Off</p>
+        </ion-card-subtitle>
+      </ion-card>
+      <div style="display: flex; align-items: center; justify-content: space-between;padding-left: 15px;">
+        <ion-button fill="clear" slot="start" class="add-to-cart-btn" style="margin-right: 15px;" (click)="addToCart()">
+          <ion-icon name="cart-outline"></ion-icon>add to cart
+        </ion-button>
+      </div>
+    </ion-col>
+
+    <!-- Second card -->
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-card routerLink="/dhoop" style="margin-right: 10px; width: 150px;" class="ion-card">
+        <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/dhoop-cone/i/p/m/premium-and-luxury-dhoop-cones-sticks-pack-of-7-7-prabhu-shriram-original-imagxyrfbqfkb5fr.jpeg?q=70" alt="Card Image"
+          style="height: 100px; width: 100px; margin-left: 10px;"></ion-img>
+        <ion-card-subtitle style="margin-left: 15px;">
+          <b>Dhoop</b>
+          <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span>
+          </p>
+          <p style="color: red; margin: 0;">27% Off</p>
+        </ion-card-subtitle>
+      </ion-card>
+      <div style="display: flex; align-items: center; justify-content: space-between;padding-left: 15px;">
+        <ion-button fill="clear" slot="start" class="add-to-cart-btn" style="margin-right: 15px;" (click)="addToCart()">
+          <ion-icon name="cart-outline"></ion-icon>add to cart
+        </ion-button>
+      </div>
+    </ion-col>
+</ion-row>
+<ion-row>
+    <!-- Third card -->
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-card routerLink="/camphour" style="margin-right: 10px; width: 150px;" class="ion-card">
+        <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/havan-items/m/x/o/camphor-500gms-camveda-original-imagvkg6hjnk2rsf.jpeg?q=70" alt="Card Image"
+          style="height: 100px; width: 100px; margin-left: 10px;"></ion-img>
+        <ion-card-subtitle style="margin-left: 15px;">
+          <b>Camphour</b>
+          <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span>
+          </p>
+          <p style="color: red; margin: 0;">27% Off</p>
+        </ion-card-subtitle>
+      </ion-card>
+      <div style="display: flex; align-items: center; justify-content: space-between;padding-left: 15px;">
+        <ion-button fill="clear" slot="start" class="add-to-cart-btn" style="margin-right: 15px;" (click)="addToCart()">
+          <ion-icon name="cart-outline"></ion-icon>add to cart
+        </ion-button>
+      </div>
+    </ion-col>
+  
+
+  <!-- Second column with three cards -->
+  <ion-row>
+    <!-- Fourth card -->
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-card routerLink="/rose" style="margin-right: 10px; width: 150px;" class="ion-card">
+        <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/toner/b/w/d/-original-imagtsbumspeg8jg.jpeg?q=70" alt="Card Image"
+          style="height: 100px; width: 100px; margin-left: 10px;"></ion-img>
+        <ion-card-subtitle style="margin-left: 15px;">
+          <b>Rose Water</b>
+          <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span>
+          </p>
+          <p style="color: red; margin: 0;">27% Off</p>
+        </ion-card-subtitle>
+      </ion-card>
+      <div style="display: flex; align-items: center; justify-content: space-between;padding-left: 15px;">
+        <ion-button fill="clear" slot="start" class="add-to-cart-btn" style="margin-right: 15px;" (click)="addToCart()">
+          <ion-icon name="cart-outline"></ion-icon>add to cart
+        </ion-button>
+      </div>
+    </ion-col>
+    </ion-row>
+
+    <ion-row>
+    <!-- Fifth card -->
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-card routerLink="/gangajal" style="margin-right: 10px; width: 150px;" class="ion-card">
+        <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/havan-items/t/o/w/haridwar-gngajal-2-liter-hmm-original-imagkw2edkuqhc4t.jpeg?q=70" alt="Card Image"
+          style="height: 100px; width: 100px; margin-left: 10px;"></ion-img>
+        <ion-card-subtitle style="margin-left: 15px;">
+          <b>Gangajal</b>
+          <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span>
+          </p>
+          <p style="color: red; margin: 0;">27% Off</p>
+        </ion-card-subtitle>
+      </ion-card>
+      <div style="display: flex; align-items: center; justify-content: space-between;padding-left: 15px;">
+        <ion-button fill="clear" slot="start" class="add-to-cart-btn" style="margin-right: 15px;" (click)="addToCart()">
+          <ion-icon name="cart-outline"></ion-icon>add to cart
+        </ion-button>
+      </div>
+    </ion-col>
+
+    <!-- Sixth card -->
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-card routerLink="/gomutra" style="margin-right: 10px; width: 150px;" class="ion-card">
+        <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/havan-items/p/c/v/gomutra-ark-tharparakar-desi-cow-urine-ark-purndhenu-original-imagrekuddwygcj8.jpeg?q=70" alt="Card Image"
+          style="height: 100px; width: 100px; margin-left: 10px;"></ion-img>
+        <ion-card-subtitle style="margin-left: 15px;">
+          <b>Gomutra</b>
+          <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span>
+          </p>
+          <p style="color: red; margin: 0;">27% Off</p>
+        </ion-card-subtitle>
+      </ion-card>
+      <div style="display: flex; align-items: center; justify-content: space-between;padding-left: 15px;">
+        <ion-button fill="clear" slot="start" class="add-to-cart-btn" style="margin-right: 15px;" (click)="addToCart()">
+          <ion-icon name="cart-outline"></ion-icon>add to cart
+        </ion-button>
+      </div>
+    </ion-col>
+</ion-row>
+</ion-row>
+</ion-content>

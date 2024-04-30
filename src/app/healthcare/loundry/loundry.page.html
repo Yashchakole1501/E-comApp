@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Loundry Essentials</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- First Row -->
+
+  <ion-row>
+    <!-- First Card -->
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-item (click)="navigateTo('washing')">
+        <ion-card style="margin-right: 10px;width: 150px;" class="ion-card">
+          <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/washing-powder/n/r/y/-original-imaguv89rus8rdcq.jpeg?q=70"
+            alt="Card Image" style="height: 100px; width: 100px;margin-left: 10px;"></ion-img>
+          <ion-card-subtitle style="margin-left: 15px;">
+            <b>Washing <br> Powders</b>
+            <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span></p>
+            <p style="color: red; margin: 0;">27% Off</p>
+          </ion-card-subtitle>
+          <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 10px;">
+           
+              <ion-icon name="cart-outline"></ion-icon>add to cart
+          
+          </div>
+        </ion-card>
+      </ion-item>
+    </ion-col> <!-- First Card -->
+
+    <!-- Second Card -->
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-item (click)="navigateTo('washing-liquids')">
+        <ion-card style="margin-right: 10px;width: 150px;" class="ion-card">
+          <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/liquid-detergent/t/f/3/10-washing-machine-liquid-detergent-top-load-and-front-load-original-imagyenvvmkffaue.jpeg?q=70"
+            alt="Card Image" style="height: 100px; width: 100px;margin-left: 10px;"></ion-img>
+          <ion-card-subtitle style="margin-left: 15px;">
+            <b>Washing <br> Liquids</b>
+            <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span></p>
+            <p style="color: red; margin: 0;">27% Off</p>
+          </ion-card-subtitle>
+          <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 10px;">
+        
+              <ion-icon name="cart-outline"></ion-icon>add to cart
+          
+          </div>
+        </ion-card>
+      </ion-item>
+    </ion-col>
+  </ion-row> <!-- First Row -->
+
+  <!-- Second Row -->
+  <ion-row>
+    <!-- Third Card -->
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-item (click)="navigateTo('detergent')">
+        <ion-card style="margin-right: 10px;width: 150px;" class="ion-card">
+          <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/washing-bar/v/4/l/detergent-cake-5-1250-ghadi-original-imagz3f8whq8zxfb.jpeg?q=70"
+            alt="Card Image" style="height: 100px; width: 100px;margin-left: 10px;"></ion-img>
+          <ion-card-subtitle style="margin-left: 15px;">
+            <b>Detergent <br> Cake</b>
+            <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span></p>
+            <p style="color: red; margin: 0;">27% Off</p>
+          </ion-card-subtitle>
+          <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 10px;">
+           
+              <ion-icon name="cart-outline"></ion-icon>add to cart
+
+          </div>
+        </ion-card>
+      </ion-item>
+    </ion-col>
+  </ion-row> <!-- Second Row -->
+</ion-content>

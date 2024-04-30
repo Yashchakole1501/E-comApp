@@ -1,0 +1,56 @@
+<ion-content>
+  <div class="register-header">
+    <h1>Register</h1>
+  </div>
+  <form [formGroup]="RegisterForm" (ngSubmit)="register()">
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" formControlName="UserName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="Password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" formControlName="Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input type="text" formControlName="FName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input type="text" formControlName="LName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Mobile Number</ion-label>
+      <ion-input type="text" formControlName="Mobno"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Address</ion-label>
+      <ion-input type="text" formControlName="Add1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Pincode</ion-label>
+      <ion-input type="text" formControlName="PinCode"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">City</ion-label>
+      <ion-input type="text" formControlName="City"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Shipping Address</ion-label>
+      <ion-input type="text" formControlName="ShippingAdd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Shipping Pincode</ion-label>
+      <ion-input type="text" formControlName="SAddPinCode"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Shipping City</ion-label>
+      <ion-input type="text" formControlName="SAddCity"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block">Register</ion-button>z
+  </form>
+</ion-content>

@@ -1,0 +1,29 @@
+/* Apply the animation to the avatar image */
+ion-avatar img {
+    animation: blink 4s infinite;
+    height:30px;
+    width:30px;
+   margin-left: 10px;
+  margin-top: 16px;
+     /* Adjust the duration and other properties as needed */
+  }
+  
+  
+  ion-toolbar {
+    --background: linear-gradient(to right, #4CAF50, #2196F3); /* Background color gradient */
+    color: #fff; /* Text color */
+    /* Add some padding to the top */
+  }
+  /* Styles for the cart badge */
+/* Styles for the ion-badge */
+ion-badge {
+  --background: red; /* Change the background color */
+  --color: white; /* Change the text color */
+  font-size: 14px; /* Adjust the font size */
+  font-weight: bold; /* Make the font bold */
+  padding: 4px 8px; /* Add padding to the badge */
+  border-radius: 50%; /* Make the badge circular */
+  position: absolute; /* Position the badge */
+  top: 5px; /* Adjust the top position */
+  right: 10px; /* Adjust the right position */
+}

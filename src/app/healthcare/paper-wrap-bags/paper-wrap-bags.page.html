@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Paper-Wrap-Bags</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- First Card -->
+  <ion-col size="auto" style="margin-right: 5px;">
+    <ion-card routerLink="/bags" style="margin-right: 10px;width: 150px; " class="ion-card">
+      <ion-img src="https://rukminim2.flixcart.com/image/612/612/kdhphu80/napkin/h/5/y/meal-napkin-tissue-30-30cm-pack-of-5-5-excel-original-imafue2uhes5butg.jpeg?q=70" alt="Card Image"
+        style="height: 100px; width: 100px;margin-left: 10px;"></ion-img>
+      <ion-card-subtitle style="margin-left: 15px;">
+        <b>Tissue<br>
+          Papers</b>
+          <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span>
+          </p>
+          <p style="color: red; margin: 0;">27% Off</p>
+        </ion-card-subtitle>
+      </ion-card>
+      <div style="display: flex; align-items: center; justify-content: space-between;padding-left: 15px;">
+        <ion-button fill="clear" slot="start" class="add-to-cart-btn" style="margin-right: 15px;" (click)="addToCart()">
+          <ion-icon name="cart-outline"></ion-icon>add to cart
+        </ion-button>
+      </div>
+  </ion-col>
+
+  <!-- First Card -->
+  <ion-col size="auto" style="margin-right: 5px;">
+    <ion-card routerLink="/bags" style="margin-right: 10px;width: 150px; " class="ion-card">
+      <ion-img src="https://rukminim2.flixcart.com/image/612/612/kri3xjk0/foil-shrinkwrap/b/b/j/100-7-5-frankie-bag-dharj-with-dj-original-imag59srszchjymg.jpeg?q=70" alt="Card Image"
+        style="height: 100px; width: 100px;margin-left: 10px;"></ion-img>
+      <ion-card-subtitle style="margin-left: 15px;">
+        <b>Bags</b>
+        <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span>
+        </p>
+        <p style="color: red; margin: 0;">27% Off</p>
+      </ion-card-subtitle>
+    </ion-card>
+    <div style="display: flex; align-items: center; justify-content: space-between;padding-left: 15px;">
+      <ion-button fill="clear" slot="start" class="add-to-cart-btn" style="margin-right: 15px;" (click)="addToCart()">
+        <ion-icon name="cart-outline"></ion-icon>add to cart
+      </ion-button>
+    </div>
+  </ion-col>

@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Dishwashing Supplies</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- First Row -->
+  <ion-row>
+    <!-- First Card -->
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-item (click)="navigateTo('dishwash-liquid')">
+        <ion-card style="margin-right: 10px;width: 200px;height: auto;" class="ion-card">
+          <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/dish-cleaning-gel/h/d/k/lemon-5-liter-dish-cleaning-gel-non-acidic-dishwashing-detergent-original-imagubdhhv8fdwhc.jpeg?q=70" alt="Card Image" style="height: 100px; width: 100px;margin-left: 15px;"></ion-img>
+          <ion-card-subtitle style="margin-left: 15px;">
+            <b>Dishwash <br> Liquid</b>
+            <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span></p>
+            <p style="color: red; margin: 0;">27% Off</p>
+          </ion-card-subtitle>
+          <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 10px;">
+           
+              <ion-icon name="cart-outline"></ion-icon>add to cart
+         
+          </div>
+        </ion-card>
+      </ion-item>
+    </ion-col>
+    <!-- Second Card -->
+    <ion-col size="auto" style="margin-right: 5px;">
+      <ion-item (click)="navigateTo('dishwash-bar')">
+        <ion-card style="margin-right: 10px;width: 200px;height: auto;" class="ion-card">
+          <ion-img src="https://rukminim2.flixcart.com/image/612/612/xif0q/dish-washing-bar/k/t/5/shine-dishwash-tub-bar-liquid-bottle-total-850-4-850-rubb-original-imagzfhhnr2thj3k.jpeg?q=70" alt="Card Image" style="height: 100px; width: 100px;margin-left: 20px;"></ion-img>
+          <ion-card-subtitle style="margin-left: 15px;">
+            <b>Dishwash <br> Bar</b>
+            <p style="color: green; font-size: large;">₹173 <span style="text-decoration: line-through;">221</span></p>
+            <p style="color: red; margin: 0;">27% Off</p>
+          </ion-card-subtitle>
+          <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 10px;">
+          
+              <ion-icon name="cart-outline"></ion-icon>add to cart
+        
+          </div>
+        </ion-card>
+      </ion-item>
+    </ion-col>
+  </ion-row> <!-- First Row -->
+</ion-content>

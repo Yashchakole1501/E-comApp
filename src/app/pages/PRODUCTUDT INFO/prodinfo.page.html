@@ -1,0 +1,228 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>E-Shopping App</ion-title> -->
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+      <div class="avatar-container">
+        <ion-avatar slot="start" (click)="myaccount()">
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+      </div>
+      <div><b>Product Info</b></div>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+   
+  <div slot="end" style="padding-right: 15px;" class="cart-container" (click)="goToCartPage()">
+    <ion-icon name="cart-outline" style="font-size:32px;"></ion-icon>
+    <ion-badge color="danger" class="cart-badge" *ngIf="cartService.getSelectedItems().length > 0">
+      {{ cartService.getSelectedItems().length }}
+    </ion-badge>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Display products -->
+  <div *ngIf="dataSource && dataSource.length > 0">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ng-container *ngIf="dataSource">
+          <ion-card *ngFor="let item of dataSource" >
+            <ion-card-header>
+              <ion-card-title>{{ item.productName }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="image-container">
+                <img *ngFor="let imagePath of [item.folderPath1, item.folderPath2]" [src]="imagePath" alt="Product Image">
+              </div>
+              <ion-list>
+                <ion-item>
+                  <ion-label>Brand Name</ion-label>
+                  <ion-text>{{ item.brandName }}</ion-text>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Code</ion-label>
+                  <ion-text>{{ item.code }}</ion-text>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Size</ion-label>
+                  <ion-text>{{ item.size }}</ion-text>
+                </ion-item>
+                <ion-item>
+                  <ion-label>MRP</ion-label>
+                  <ion-text>{{ item.mrp }}</ion-text>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Discount</ion-label>
+                  <ion-text>{{ item.discount }}</ion-text>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Total Price</ion-label>
+                  <ion-text>{{ item.totalPrice }}</ion-text>
+                </ion-item>
+              </ion-list>
+              <!-- Add the quantity container and buttons here -->
+              <div class="quantity-container">
+                <ion-item>
+                  <ion-label>Quantity:</ion-label>
+                  <ion-button fill="clear" (click)="decreaseQuantity()">-</ion-button>
+                  <ion-input type="number" [(ngModel)]="selectedQuantity"></ion-input>
+                  <ion-button fill="clear" (click)="increaseQuantity()">+</ion-button>
+                </ion-item>
+              </div>
+              <ion-item>
+                <ion-label>info</ion-label>
+                <!-- Render the HTML content of the info property -->
+                <div [innerHTML]="item.info"></div>
+              </ion-item>
+              <div class="button-container">
+                <ion-button expand="block" color="primary" (click)="addToCart(item)">Add to Cart</ion-button>
+                <ion-button expand="block" color="success" (click)="buyNow(item)">Buy Now</ion-button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ng-container>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </div>
+  
+
+
+  <!-- Display additional data (e.g., offers) -->
+  <div *ngIf="dataSourceitemoffers && dataSourceitemoffers.length > 0">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ng-container *ngIf="dataSourceitemoffers">
+            <ion-card *ngFor="let offer of dataSourceitemoffers">
+              <ion-card-header>
+                <ion-card-title>{{ offer.productName }}</ion-card-title>
+                 <!-- Add Best Offer label -->
+              <ion-badge color="success" *ngIf="offer.discount >= 20">Best Offer</ion-badge>
+              </ion-card-header>
+              <ion-card-content>
+                <div class="image-container">
+                  <ion-img [src]="offer.imgPath21" alt="Card Image" style="height: 100px; width: 100px; margin: 0 auto;"></ion-img>
+                </div>
+                <ion-list>
+                  <ion-item>
+                    <ion-label>Brand Name</ion-label>
+                    <ion-text>{{ offer.brandName }}</ion-text>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Code</ion-label>
+                    <ion-text>{{ offer.code }}</ion-text>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Size</ion-label>
+                    <ion-text>{{ offer.size }}</ion-text>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>MRP</ion-label>
+                    <ion-text>{{ offer.mrp }}</ion-text>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Discount</ion-label>
+                    <ion-text>{{ offer.discount }}</ion-text>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Total Price</ion-label>
+                    <ion-text>{{ offer.totalPrice }}</ion-text>
+                  </ion-item>
+                  <!-- Add the quantity container and buttons here -->
+                  <div class="quantity-container">
+                    <ion-item>
+                      <ion-label>Quantity:</ion-label>
+                      <ion-button fill="clear" (click)="decreaseQuantity()">-</ion-button>
+                      <ion-input type="number" [(ngModel)]="selectedQuantity"></ion-input>
+                      <ion-button fill="clear" (click)="increaseQuantity()">+</ion-button>
+                    </ion-item>
+                  </div>
+
+                  <ion-item>
+                    <ion-label>info</ion-label>
+                    <!-- Render the HTML content of the info property -->
+                    <div [innerHTML]="offer.info"></div>
+                  </ion-item>
+                  
+                  <div class="button-container">
+                    <ion-button expand="block" color="primary" (click)="addToCart(offer)">Add to Cart</ion-button>
+                    <ion-button expand="block" color="success" (click)="buyNow(offer)">Buy Now</ion-button>
+                  </div>
+                </ion-list>
+              </ion-card-content>
+            </ion-card>
+          </ng-container>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Display additional data (e.g., sellers) -->
+  <div *ngIf="dataSourceitemseller && dataSourceitemseller.length > 0">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ng-container *ngIf="dataSourceitemseller">
+            <ion-card *ngFor="let seller of dataSourceitemseller">
+              <ion-card-header>
+                <ion-card-title>{{ seller.productName }}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <div class="image-container">
+                  <ion-img [src]="seller.imgPath21" alt="Card Image" style="height: 100px; width: 100px; margin: 0 auto;"></ion-img>
+                </div>
+                <ion-list>
+                  <ion-item>
+                    <ion-label>Brand Name</ion-label>
+                    <ion-text>{{ seller.brandName }}</ion-text>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Code</ion-label>
+                    <ion-text>{{ seller.code }}</ion-text>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Size</ion-label>
+                    <ion-text>{{ seller.size }}</ion-text>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>MRP</ion-label>
+                    <ion-text>{{ seller.mrp }}</ion-text>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Discount</ion-label>
+                    <ion-text>{{ seller.discount }}</ion-text>
+                  </ion-item>
+             
+                  <!-- Add the quantity container and buttons here -->
+                  <div class="quantity-container">
+                    <ion-item>
+                      <ion-label>Quantity:</ion-label>
+                      <ion-button fill="clear" (click)="decreaseQuantity()">-</ion-button>
+                      <ion-input type="number" [(ngModel)]="selectedQuantity"></ion-input>
+                      <ion-button fill="clear" (click)="increaseQuantity()">+</ion-button>
+                    </ion-item>
+                  </div>
+
+                  <ion-item>
+                    <ion-label>info</ion-label>
+                    <div [innerHTML]="seller.info"></div>
+                  </ion-item>
+
+                  <div class="button-container">
+                    <ion-button expand="block" color="primary" (click)="addToCart(seller)">Add to Cart</ion-button>
+                    <ion-button expand="block" color="success" (click)="buyNow(seller)">Buy Now</ion-button>
+                  </div>
+                </ion-list>
+              </ion-card-content>
+            </ion-card>
+          </ng-container>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

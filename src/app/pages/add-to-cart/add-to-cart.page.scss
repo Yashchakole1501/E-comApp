@@ -1,0 +1,156 @@
+/* add-to-cart.page.scss */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    max-width: 250px; /* Adjust as needed */
+    width: 100%; /* Make sure the card takes the full width */
+    background-color: #f5f777;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .item-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .item-details {
+    padding: 16px;
+  }
+  
+  .item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .item-price {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .item-quantity {
+    font-size: 14px;
+    color: #888;
+  }
+  
+ 
+  .image-container {
+    display: flex;
+  }
+  
+  .image-container img {
+    width: 50%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  ion-toolbar {
+    --background: linear-gradient(to right, #4CAF50, #2196F3); /* Background color gradient */
+    color: #fff; /* Text color */
+    padding-top: 10px; /* Add some padding to the top */
+  }
+  .total-amount {
+    background-color: whitesmoke; /* Background color */
+    padding: 10px; /* Padding around the total amount */
+    border-top: 1px solid #e1e1e1; /* Top border */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-align: right; /* Align text to the right */
+  }
+  .remove-button button,
+.buy-now-button {
+  background-color: #6eff4d; /* Change button color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px; /* Adjust button padding */
+  cursor: pointer;
+  flex: 1; /* Make buttons flexible to take up available space */
+  margin-right: 8px; /* Add margin between buttons */
+}
+
+.remove-button button:hover,
+.buy-now-button:hover {
+  background-color: rgb(23, 234, 58); /* Change hover color */
+}
+
+.buy-now-button {
+  background-color: rgb(14, 237, 14); /* Change button color */
+  margin-right: 0; /* Remove right margin for the last button */
+}
+.img{
+  margin-top: 40%;
+  margin-left:80px;
+}
+.no-items-message{
+  margin-left:80px;
+}
+ion-footer {
+  position: fixed;
+  bottom: 0;
+  background-color: green;
+}
+
+ion-footer ion-toolbar {
+  padding: 0;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-amount {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+
+.continue-button {
+  --border-radius: 0;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 20px;
+
+  background: linear-gradient(to right, #ff4e50, #f9d423); /* Apply linear gradient background */
+  color: white; /* Set text color to white */
+}
+/* CSS for quantity input and buttons */
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-label {
+  flex: 1;
+}
+
+.quantity-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-buttons ion-button {
+  width: 30px;
+  height: 30px;
+  --border-radius: 50%;
+  margin: 0 5px;
+  border: 1px solid #000; /* Add border */
+}
+
+/* Optional: Adjust button appearance */
+.quantity-buttons ion-button[fill="clear"] {
+  --border-color: #000;
+  color: #000;
+}

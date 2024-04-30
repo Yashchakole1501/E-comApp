@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+      <div class="avatar-container">
+        <ion-avatar slot="start" (click)="myaccount()">
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+      </div>
+      <div><b>Product Details</b></div>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div slot="end" style="padding-right: 15px;" class="cart-container" (click)="goToCartPage()">
+      <ion-icon name="cart-outline" style="font-size:32px;"></ion-icon>
+      <ion-badge color="danger" class="cart-badge" *ngIf="cartService.getSelectedItems().length > 0">
+        {{ cartService.getSelectedItems().length }}
+      </ion-badge>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ng-container *ngIf="dataSource">
+            <ion-card *ngFor="let item of dataSource" (click)="navigatetoinformation(item)">
+              <ion-card-header>
+                <ion-card-title>{{ item.productName }}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <div class="image-container">
+                  <img *ngFor="let imagePath of [item.folderPath1, item.folderPath2]" [src]="imagePath" alt="Image">
+                </div>
+              </ion-card-content>
+              <ion-list>
+                <ion-item class="item-mrp">
+                  <ion-label>{{ 'MRP - ₹'  + item.mrp }}</ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-card>
+          </ng-container>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

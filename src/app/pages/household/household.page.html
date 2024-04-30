@@ -1,0 +1,26 @@
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Household Supplies</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <!-- Use *ngFor directive to loop through dataSource array and generate cards dynamically -->
+        <ion-col size="6" style="margin-left: -1%;" *ngFor="let item of dataSource">
+          <ion-card routerLink="/healthcare/{{ item.id }}" style="width: 150px; height: 250px;" class="ion-card">
+            <ion-img [src]="item.imageUrl" alt="Card Image" style="height: 150px; width: 100%;"></ion-img>
+            <br>
+            <ion-card-subtitle style="margin-left: 25px; font-size: 0.8em;">
+              <b>{{ item.title }}</b>
+              <p style="color: green; font-size: larger;">{{ item.discount }}</p>
+            </ion-card-subtitle>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

@@ -1,0 +1,87 @@
+<ion-app>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-header>
+    </ion-header>
+    <ion-content>
+      <div class="menu-header-bg"></div>
+      <ion-toolbar style="--background: var(--ion-color-primary);">
+        <!-- Your toolbar content goes here -->
+        <ion-avatar slot="start" (click)="navigateToMyAccount()">
+          <img style="height: 37px;width: 45px;padding-left: 5px;"  alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-title style="color: chartreuse;">E-Shopping</ion-title>
+        <ion-avatar slot="end">
+          <img style="height: 40px;width: 50px;padding-right: 5px;" alt="Another image" src="\assets\logo 2.jpeg" />
+        </ion-avatar>
+      </ion-toolbar>
+      <div class="header-content">
+      </div>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerLink="/home">
+            <ion-icon name="Home" slot="start"></ion-icon>
+            <ion-label>Main</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/myaccount">
+            <ion-icon name="key-sharp" slot="start"></ion-icon>
+            <ion-label>My Account</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/allcategories">
+            <ion-icon name="grid-sharp" slot="start"></ion-icon>
+            <ion-label>All Ctaegories</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/myorders">
+            <ion-icon name="bag-handle-sharp" slot="start"></ion-icon>
+            <ion-label>My Orders</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/add-to-cart">
+            <ion-icon name="cart-sharp" slot="start"></ion-icon>
+            <ion-label>My Cart</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/mynotify">
+            <ion-icon name="notifications-sharp" slot="start"></ion-icon>
+            <ion-label>My Notifications</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/offerzone">
+            <ion-icon name="ticket-sharp" slot="start"></ion-icon>
+            <ion-label>Offer Zone</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/coupons">
+            <ion-icon name="pricetag-sharp" slot="start"></ion-icon>
+            <ion-label>Coupons</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/sell">
+            <ion-icon name="wallet-sharp" slot="start"></ion-icon>  
+            <ion-label>Sell on Flipkart </ion-label>
+          </ion-item>
+        </ion-menu-toggle>.
+        </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

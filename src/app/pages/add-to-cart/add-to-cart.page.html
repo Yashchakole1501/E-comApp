@@ -1,0 +1,85 @@
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Add To Cart</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ng-container *ngIf="selectedItems.length > 0; else noItems">
+            <!-- Loop through each selected item -->
+            <ion-card *ngFor="let item of selectedItems">
+                 <!-- Checkbox for selecting the item -->
+               
+                 <ion-checkbox [(ngModel)]="item.selected" (ionChange)="toggleSelection(item)"></ion-checkbox>
+  
+
+              <ion-card-header>
+                <ion-card-title>{{ item.productName }}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <div class="image-container">
+                  <!-- Display images for the item -->
+                  <img *ngIf="item.folderPath1" [src]="item.folderPath1" alt="Image 1">
+                  <img *ngIf="!item.folderPath1 && item.imgPath11" [src]="item.imgPath11" alt="Image 1">
+                  <img *ngIf="item.folderPath2" [src]="item.folderPath2" alt="Image 2">
+                  <img *ngIf="!item.folderPath2 && item.imgPath21" [src]="item.imgPath21" alt="Image 2">
+                </div>
+                <ion-list>
+                  <!-- Display item details such as MRP and quantity -->
+                  <ion-item class="item-mrp">
+                    <ion-label>{{ 'MRP - ₹' + item.mrp }}</ion-label>
+                  </ion-item>
+                  <ion-item class="item-mrp">
+                    <ion-label>{{'Discount - ₹' + item.discount}}</ion-label>
+                  </ion-item>
+                  <ion-item class="item-mrp">
+                    <ion-label>{{  'Total - ₹'  +  calculateTotalPrice(item)}}</ion-label>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label class="quantity-label">Quantity:-</ion-label> 
+                    <div class="quantity-container">
+                      <ion-button fill="clear" (click)="decreaseQuantity(item)">-</ion-button>
+                      <ion-input class="quantity-input" type="number" [(ngModel)]="item.quantity"></ion-input>
+                      <ion-button fill="clear" (click)="increaseQuantity(item)">+</ion-button>
+                    </div>
+                  </ion-item>
+               
+                    </ion-list>
+        
+              </ion-card-content>
+              <!-- Button to remove item -->
+              <ion-button expand="full" color="danger" (click)="removeItem(item)">Remove</ion-button>
+            </ion-card>
+          </ng-container>
+          <ng-template #noItems>
+            <!-- Message when no items are in the cart -->
+            <ion-row class="ion-align-items-center ion-justify-content-center">
+            </ion-row>
+            <ion-row class="img">
+              <img src="assets/cart.png" alt="No Items Image">
+            </ion-row>
+            <div class="no-items-message">
+              No items added to cart yet.
+            </div>
+          </ng-template>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+
+  <ion-footer style="background-color: white;">
+    <ion-toolbar>
+      <div class="footer-content">
+        <div class="total-amount">Total Amount: ₹{{ totalAmount }}</div>
+        <!-- Button to proceed to buy only for selected items -->
+        <button class="continue-button" expand="full" color="primary" (click)="continueToBuy()">Continue</button>
+      </div>
+    </ion-toolbar>
+  </ion-footer>
